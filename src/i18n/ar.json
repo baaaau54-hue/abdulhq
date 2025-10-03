@@ -1,0 +1,13 @@
+{
+  "add_avatar": "شخصية جديدة",
+  "select_avatar": "اختر شخصية",
+  "send": "إرسال",
+  "settings": "إعدادات",
+  "temperature": "درجة الإبداع",
+  "web_access": "الوصول للويب",
+  "export": "تصدير المحادثة",
+  "copy": "نسخ الرد",
+  "clear_chat": "مسح المحادثة",
+  "voice_input": "تحويل الكلام لنص",
+  "voice_output": "قراءة الرد بالصوت"
+}
