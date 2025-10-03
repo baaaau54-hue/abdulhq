@@ -1,8 +1,10 @@
 // vite.config.js
-export default {
+import { defineConfig } from 'vite'
+
+export default defineConfig({
   build: {
     rollupOptions: {
-      input: 'public/index.html', // or your correct path
+      input: 'public/index.html'
     }
   }
-}
+})
