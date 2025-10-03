@@ -1,0 +1,22 @@
+{
+  "name": "cognilink-v1.2-pro",
+  "version": "1.0.0",
+  "description": "تطبيق دردشة ذكاء اصطناعي متقدم يعمل داخل المتصفح باللغة العربية.",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.2.2",
+    "marked": "^4.3.0",
+    "react-markdown": "^8.0.7"
+  },
+  "devDependencies": {
+    "vite": "^4.3.9",
+    "@vitejs/plugin-react": "^4.0.0",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11"
+  }
+}
