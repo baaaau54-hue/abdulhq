@@ -1,35 +1,31 @@
-import React, { useState } from 'react'
-import Sidebar from './components/Sidebar'
-import ChatArea from './components/ChatArea'
-import SettingsModal from './components/SettingsModal'
-import { useLocalStorage } from './hooks/useLocalStorage'
-import { Avatar } from './types'
+import React, { useState } from 'react';
+import WelcomeScreen from './components/WelcomeScreen';
+import PersonaScreen from './components/PersonaScreen';
+import ChatScreen from './components/ChatScreen';
 
 const App: React.FC = () => {
-  const [avatars, setAvatars] = useLocalStorage<Avatar[]>('avatars', [])
-  const [selectedAvatarId, setSelectedAvatarId] = useState<string | null>(avatars[0]?.id || null)
-  const [showSettings, setShowSettings] = useState(false)
+  // مراحل التطبيق: welcome, persona, chat
+  const [stage, setStage] = useState<'welcome' | 'persona' | 'chat'>('welcome');
+  const [apiKey, setApiKey] = useState('');
+  const [persona, setPersona] = useState({ name: '', description: '', avatar: '' });
 
   return (
-    <div className="app-arabic">
-      <Sidebar
-        avatars={avatars}
-        selectedAvatarId={selectedAvatarId}
-        onSelect={setSelectedAvatarId}
-        onAdd={() => setShowSettings(true)}
-      />
-      <ChatArea
-        avatar={avatars.find(v => v.id === selectedAvatarId)}
-      />
-      {showSettings && (
-        <SettingsModal
-          onClose={() => setShowSettings(false)}
-          avatars={avatars}
-          setAvatars={setAvatars}
+    <div className="main-container">
+      {stage === 'welcome' && (
+        <WelcomeScreen
+          onSaveApiKey={(key) => { setApiKey(key); setStage('persona'); }}
         />
       )}
+      {stage === 'persona' && (
+        <PersonaScreen
+          onCreatePersona={(personaObj) => { setPersona(personaObj); setStage('chat'); }}
+        />
+      )}
+      {stage === 'chat' && (
+        <ChatScreen persona={persona} apiKey={apiKey} />
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
