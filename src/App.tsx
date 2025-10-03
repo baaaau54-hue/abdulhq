@@ -4,7 +4,6 @@ import ChatArea from './components/ChatArea'
 import SettingsModal from './components/SettingsModal'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import { Avatar } from './types'
-import './styles/main.css'
 
 const App: React.FC = () => {
   const [avatars, setAvatars] = useLocalStorage<Avatar[]>('avatars', [])

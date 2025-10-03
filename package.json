@@ -3,19 +3,19 @@
   "version": "1.0.0",
   "description": "تطبيق دردشة ذكاء اصطناعي متقدم يعمل داخل المتصفح باللغة العربية.",
   "scripts": {
-    "start": "vite",
-    "build": "vite build"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^5.2.2",
-    "marked": "^4.3.0",
     "react-markdown": "^8.0.7"
   },
   "devDependencies": {
-    "vite": "^4.3.9",
+    "vite": "^4.5.0",
     "@vitejs/plugin-react": "^4.0.0",
+    "typescript": "^5.2.2",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11"
   }

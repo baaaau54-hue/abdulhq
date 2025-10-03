@@ -20,9 +20,9 @@
    ```
 2. شغل التطبيق:
    ```
-   npm start
+   npm run dev
    ```
-3. افتح المتصفح على [http://localhost:3000](http://localhost:3000)
+3. افتح المتصفح على [http://localhost:5173](http://localhost:5173)
 
 ## المتطلبات
 - مفتاح Google Gemini API (يُخزن محلياً فقط في المتصفح).
@@ -35,11 +35,12 @@ src/
   components/
   hooks/
   types/
-  utils/
   styles/
   i18n/
 README.md
 package.json
+vite.config.ts
+tsconfig.json
 ```
 
 ## الخصوصية والأمان
